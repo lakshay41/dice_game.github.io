@@ -1,0 +1,31 @@
+.container
+{
+	width: 45%;
+	font-family: 'Acme';
+}
+body
+{
+	background-color: #800000;
+}
+h1
+{
+	color:yellow;
+	text-shadow: 0px 3px white;
+	font-size: 3rem;
+	margin: 10px;
+}
+h4
+{
+	color:yellow;
+	text-shadow: 0px 1.5px white;
+}
+#dice1
+{
+	height: 100%;
+	width: 100%;
+}
+#dice2
+{
+	height: 100%;
+	width: 100%;
+}
