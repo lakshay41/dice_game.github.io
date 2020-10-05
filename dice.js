@@ -28,6 +28,7 @@ var noget1=0;
         }
 	function player1()
         {
+                document.getElementById('dice1').setAttribute("class","animated tada");
 	        noget=Math.floor(Math.random()*6)+1;
 	        var changeimg="img"+noget+".png";
 	        document.getElementById('dice1').setAttribute("src",changeimg);
@@ -37,6 +38,7 @@ var noget1=0;
         }
         function player2()
         {
+                document.getElementById('dice2').setAttribute("class","animated tada");
                 noget1=Math.floor(Math.random()*6)+1;
 	        var changeimg1="img"+noget1+".png";
 	        document.getElementById('dice2').setAttribute("src",changeimg1);
