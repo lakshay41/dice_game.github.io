@@ -34,6 +34,7 @@ var noget1=0;
 	        document.getElementById('dice1').setAttribute("src",changeimg);
                 var turnover=document.getElementById('createbutton1');
                 turnover.remove();
+                navigator.vibrate(1000);
                 create1();
         }
         function player2()
@@ -44,6 +45,7 @@ var noget1=0;
 	        document.getElementById('dice2').setAttribute("src",changeimg1);
                 var turnover=document.getElementById('createbutton');
                 turnover.remove();
+                navigator.vibrate(1000);
 	        result();
                 create();
         }
@@ -53,6 +55,7 @@ var noget1=0;
         	{
         		document.getElementById('winner1').innerHTML="Player2 Wins";
                         document.getElementById('winner').innerHTML="Player1 Loose";
+                        
         	}
         	else if(noget>noget1)
         	{
@@ -63,5 +66,6 @@ var noget1=0;
         	{
         		document.getElementById('winner').innerHTML="Draw";
                         document.getElementById('winner1').innerHTML="Draw";
+                        
         	}
         }
