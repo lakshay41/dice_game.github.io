@@ -1,8 +1,10 @@
 var noget=0;
 var noget1=0;
-
-
-
+       
+                var name=document.getElementById('name').innerHTML=localStorage.getItem("textvalue");
+                var name1=document.getElementById('name1').innerHTML=localStorage.getItem("textvalue1");
+        
+        
         function create()
         {
                 var div1=document.getElementById('create1');
@@ -28,24 +30,24 @@ var noget1=0;
         }
 	function player1()
         {
-                document.getElementById('dice1').setAttribute("class","animated tada");
+                animation();
 	        noget=Math.floor(Math.random()*6)+1;
 	        var changeimg="img"+noget+".png";
 	        document.getElementById('dice1').setAttribute("src",changeimg);
                 var turnover=document.getElementById('createbutton1');
                 turnover.remove();
-                navigator.vibrate(1000);
+                navigator.vibrate(300);
                 create1();
         }
         function player2()
         {
-                document.getElementById('dice2').setAttribute("class","animated tada");
+                animation1();
                 noget1=Math.floor(Math.random()*6)+1;
 	        var changeimg1="img"+noget1+".png";
 	        document.getElementById('dice2').setAttribute("src",changeimg1);
                 var turnover=document.getElementById('createbutton');
                 turnover.remove();
-                navigator.vibrate(1000);
+                navigator.vibrate(300);
 	        result();
                 create();
         }
@@ -53,19 +55,26 @@ var noget1=0;
         {
         	if(noget<noget1)
         	{
-        		document.getElementById('winner1').innerHTML="Player2 Wins";
-                        document.getElementById('winner').innerHTML="Player1 Loose";
-                        
+        		document.getElementById('winner1').innerHTML=name1+" "+"Wins";
+                        document.getElementById('winner').innerHTML= name1+" "+"Wins"; 
         	}
         	else if(noget>noget1)
         	{
-        		document.getElementById('winner').innerHTML="Player1 Wins";
-                        document.getElementById('winner1').innerHTML="Player2 Loose";
+        		document.getElementById('winner').innerHTML=name+" "+"Wins";
+                        document.getElementById('winner1').innerHTML=name+" "+"Wins";
         	}
         	else
         	{
-        		document.getElementById('winner').innerHTML="Draw";
-                        document.getElementById('winner1').innerHTML="Draw";
+        		document.getElementById('winner').innerHTML="Draw!";
+                        document.getElementById('winner1').innerHTML="Draw!";
                         
         	}
+        }
+        function animation()
+        {
+                document.getElementById('dice1').setAttribute("class","animated tada");
+        }
+        function animation1()
+        {
+                document.getElementById('dice2').setAttribute("class","animated tada");
         }
